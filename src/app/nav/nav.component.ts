@@ -3,21 +3,33 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink , RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+  styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-
-  isScroll : boolean = false;
+  isScroll: boolean = false;
+  isNavbarOpen: boolean = false;
 
   @HostListener('window:scroll', [])
-  scrollUser(){
-    if(scrollY>0){
-      this.isScroll = true;
-    }else{
-      this.isScroll = false;
+  scrollUser() {
+    this.isScroll = window.scrollY > 0;
+  }
 
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeNavbar(event: Event) {
+    const target = event.target as HTMLElement;
+    const isInsideNavbar = target.closest('.navbar');
+    if (!isInsideNavbar) {
+      this.isNavbarOpen = false;
     }
+  }
+
+  closeOnSelection() {
+    this.isNavbarOpen = false;
   }
 }

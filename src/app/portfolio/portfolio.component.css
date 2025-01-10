@@ -132,9 +132,9 @@ i {
   }
 
   .overlay {
-    top: -152px;
+    top: -150px;
     left: -1px;
-    width: 458px;
+    width: 457px;
     height: 330px;
   }
 
@@ -150,10 +150,28 @@ i {
   }
 
   .overlay {
-    top: -120px;
+    top: -134px;
     left: -1px;
-    width: 370px;
-    height: 268px;
+    width: 408px;
+    height: 295px;
+  }
+
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-item {
+    margin-bottom: 15px;
+  }
+
+  .overlay {
+    top: -100px;
+    left: -1px;
+    width: 319px;
+    height: 230px;
   }
 
 }
