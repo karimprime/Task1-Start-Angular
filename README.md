@@ -113,5 +113,3 @@ Contributions are welcome! If you’d like to contribute to this project:
    git push origin feature/YourFeatureName
    ```
 5. Submit a pull request.
-
----
