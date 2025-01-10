@@ -13,7 +13,6 @@ Welcome to the **Task1-Start-Angular** project! This repository contains the sou
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## About the Project
 
@@ -114,9 +113,5 @@ Contributions are welcome! If you’d like to contribute to this project:
    git push origin feature/YourFeatureName
    ```
 5. Submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
