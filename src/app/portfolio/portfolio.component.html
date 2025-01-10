@@ -1,131 +1,86 @@
-<section class="d-flex flex-column justify-content-center align-items-center">
+<section class="portfolio pb-5">
+  <div class="container">
+    <h2 class="text-uppercase fs-1 text-center fw-bold">Contact Component</h2>
+    <div class="side-boder d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <span class=""></span>
+        <i class="bi bi-star-fill fs-6"></i>
+        <span class=""></span>
+      </div>
 
-  <h2 class="text-uppercase fs-1 text-center fw-bold">Portfolio component</h2>
-  <div class="side-boder d-flex flex-column justify-content-center align-items-center">
-    <div class="d-flex justify-content-center align-items-center">
-      <span class=""></span>
-      <i class="bi bi-star-fill fs-6"></i>
-      <span class=""></span>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port1.png" alt="port1">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port2.png" alt="port2">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port3.png" alt="port3">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port1.png" alt="port1">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port2.png" alt="poert2">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
+            <img class="img-fluid rounded-2" src="Images/port3.png" alt="port3">
+            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
+              <i class="bi bi-plus-lg text-light"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    </div>
-      <div class="container py-3">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
 
-      <div class="col">
-        <a href="#image1" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/poert1.png" class="img-fluid gallery-image hover-overlay" alt="Image 1">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
 
-        <div class="modal fade" id="image1" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/poert1.png" alt="Image 1" class="img-fluid">
-              </div>
-            </div>
-          </div>
+    <div class="show-img vh-100 d-flex justify-content-center align-items-center" [class]="{
+    'd-none': imgSrc === '',
+    'd-block': imgSrc !== ''
+  }" (click)="removeImgSrc()">
+      <div class="container">
+        <div class="col-sm-9 col-md-6 col-lg-5 mx-auto">
+          <img class="img-fluid" [src]="imgSrc" alt="">
         </div>
       </div>
-
-      <div class="col">
-        <a href="#image2" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/port2.png" class="img-fluid gallery-image" alt="Image 1">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
-        <div class="modal fade" id="image2" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/port2.png" alt="Image 2" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="col">
-        <a href="#image3" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/port3.png" class="img-fluid gallery-image" alt="Image 3">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
-        <div class="modal fade" id="image3" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/port3.png" alt="Image 3" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <a href="#image1" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/poert1.png" class="img-fluid gallery-image hover-overlay" alt="Image 1">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
-
-        <div class="modal fade" id="image1" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/poert1.png" alt="Image 1" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <a href="#image2" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/port2.png" class="img-fluid gallery-image" alt="Image 1">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
-        <div class="modal fade" id="image2" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/port2.png" alt="Image 2" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="col">
-        <a href="#image3" data-bs-toggle="modal" class="gallery-item">
-          <img src="/Images/port3.png" class="img-fluid gallery-image" alt="Image 3">
-          <div class="overlay d-flex justify-content-center align-items-center">
-            <i class="bi bi-plus-lg text-light"></i>
-          </div>
-        </a>
-        <div class="modal fade" id="image3" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/Images/port3.png" alt="Image 3" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
   </div>
 </section>

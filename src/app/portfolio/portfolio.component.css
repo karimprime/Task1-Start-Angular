@@ -1,5 +1,5 @@
-/* Base styling */
-section {
+.portfolio {
+  min-height: 100vh;
   background-color: #FFFFFF;
   width: 100%;
   padding: 8rem 0;
@@ -21,164 +21,30 @@ i {
 }
 
 
-.gallery-item {
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.portfolio-header {
+  padding-top: 80px;
 }
 
-.gallery-image {
-  transition: transform 0.3s ease;
-}
-
-.gallery-item img {
-  border-radius: 10px;
-}
-
-.gallery-item:hover .gallery-image {
-  opacity: 1;
-}
-
-.modal-body img {
-  border-radius: 10px;
-  max-width: 100%;
-}
-
-.modal-content {
-  background: none;
-  border: none;
-  box-shadow: none;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery-image {
-  width: 100%;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Overlay Styling */
-.overlay {
-  position: absolute;
-  top: -131px;
-  left: 0;
-  width: 400px;
-  height: 290px;
-  background-color: #29b198d5;
+.bg-icon {
+  inset: 0;
+  background-color: #1abc9ce6;
   opacity: 0;
-  transition: opacity 0.5s ease;
-  border-radius: 10px;
+  transition: 0.5s ease opacity;
+
+  i {
+    font-size: 6rem;
+  }
+
 }
 
-.gallery-item:hover .overlay {
+.card-portfolio:hover .bg-icon {
   opacity: 1;
+  cursor: pointer;
 }
 
-.overlay i {
-  font-size: 100px;
-  font-weight: bolder;
-}
-
-
-@media (max-width: 992px) {
-  .gallery-item {
-    margin-bottom: 20px;
-  }
-
-  .overlay {
-    top: -105px;
-    left: 0;
-    width: 325px;
-    height: 235px;
-  }
-
-  .overlay i {
-    font-size: 60px;
-  }
-
-  .modal-body img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-item {
-    margin-bottom: 15px;
-  }
-
-  .overlay {
-    top: -154px;
-    left: 0;
-    width: 465px;
-    height: 334px;
-  }
-
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-item {
-    margin-bottom: 15px;
-  }
-
-  .overlay {
-    top: -150px;
-    left: -1px;
-    width: 457px;
-    height: 330px;
-  }
-
-}
-
-@media (max-width: 450px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-item {
-    margin-bottom: 15px;
-  }
-
-  .overlay {
-    top: -134px;
-    left: -1px;
-    width: 408px;
-    height: 295px;
-  }
-
-}
-
-@media (max-width: 350px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-item {
-    margin-bottom: 15px;
-  }
-
-  .overlay {
-    top: -100px;
-    left: -1px;
-    width: 319px;
-    height: 230px;
-  }
-
-}
-
-@media (max-width: 400px) {
-  .gallery-item img {
-    border-radius: 5px;
-  }
-
+.show-img {
+  position: fixed;
+  z-index: 555555;
+  background-color: rgba(13, 110, 253, 0.25);
+  inset: 0;
 }
