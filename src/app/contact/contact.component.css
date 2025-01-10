@@ -1,0 +1,48 @@
+section {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 8rem 0;
+}
+
+h2 {
+  color: #2C3E50;
+}
+
+span {
+  border: 2px solid #2C3E50;
+  margin: 0 15px;
+  padding: 0 40px;
+  border-radius: 15%;
+}
+
+i {
+  color: #2C3E50;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #DFE3E7;
+  border-radius: 3px;
+
+  padding: 20px 0;
+
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  background-color: #1ABC9C;
+  color: #FFFFFF;
+  margin: 20px 0;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+form button:hover {
+  background-color: #079e80;
+}
