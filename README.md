@@ -1,6 +1,6 @@
 # Task1-Start-Angular
 
-<<<<<<< HEAD
+HEAD
 Welcome to the Task1-Start-Angular project! This repository contains the source code and documentation for a beginner-level Angular application designed to help developers get started with the Angular framework.
 
 Table of Contents
@@ -208,4 +208,3 @@ Contributions are welcome! If you’d like to contribute to this project:
    git push origin feature/YourFeatureName
    ```
 5. Submit a pull request.
->>>>>>> b4018e475374f8bf0e1198c42be432bf9f7bc45a
