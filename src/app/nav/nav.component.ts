@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { navLinks } from '../models/navLinks.interface';
 
 @Component({
   selector: 'app-nav',
@@ -32,4 +33,20 @@ export class NavComponent {
   closeOnSelection() {
     this.isNavbarOpen = false;
   }
+
+
+  links: navLinks[] = [
+    {
+      lName: "About",
+      Lsrc: "/about"
+    },
+    {
+      lName: "Portfolio",
+      Lsrc: "/portfolio"
+    },
+    {
+      lName: "Contact",
+      Lsrc: "/contact"
+    }
+  ]
 }

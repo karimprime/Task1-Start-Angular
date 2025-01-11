@@ -9,68 +9,27 @@
       </div>
 
       <div class="row g-4">
+
+        @for (image of gallery; track $index) {
         <div class="col-md-6 col-lg-4">
           <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port1.png" alt="port1">
+            <img class="img-fluid rounded-2" [src]="image.gImage" [alt]="image.gNameImg">
             <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
               <i class="bi bi-plus-lg text-light"></i>
             </div>
           </div>
         </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port2.png" alt="port2">
-            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
-              <i class="bi bi-plus-lg text-light"></i>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port3.png" alt="port3">
-            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
-              <i class="bi bi-plus-lg text-light"></i>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port1.png" alt="port1">
-            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
-              <i class="bi bi-plus-lg text-light"></i>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port2.png" alt="poert2">
-            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
-              <i class="bi bi-plus-lg text-light"></i>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card-portfolio position-relative " (click)="getImgSrc($event)">
-            <img class="img-fluid rounded-2" src="Images/port3.png" alt="port3">
-            <div class="bg-icon position-absolute h-100 d-flex justify-content-center align-items-center">
-              <i class="bi bi-plus-lg text-light"></i>
-            </div>
-          </div>
-        </div>
+        }
+        @empty {
+          <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <p class="pt-2 fs-6">Gallery Empty Please Check Again Later!!</p>
+        <button class="btnback" routerLink="/home">Return to Home Page</button>
+      </div>
+        }
 
       </div>
-    </div>
 
+    </div>
 
     <div class="show-img vh-100 d-flex justify-content-center align-items-center" [class]="{
     'd-none': imgSrc === '',

@@ -48,3 +48,22 @@ i {
   background-color: rgba(13, 110, 253, 0.25);
   inset: 0;
 }
+
+
+p {
+  color: #2C3E50;
+}
+
+.btnback {
+  background-color: #1ABC9C;
+  color: #FFFFFF;
+  margin: 20px 0;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.btnback:hover{
+  background-color: #079e80;
+}

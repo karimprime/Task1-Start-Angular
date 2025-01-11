@@ -8,15 +8,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.show]="isNavbarOpen">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item me-3">
-          <a class="nav-link text-uppercase" routerLinkActive="btn active-link" routerLink="/about">About</a>
-        </li>
-        <li class="nav-item me-3">
-          <a class="nav-link text-uppercase" routerLinkActive="btn active-link" routerLink="/portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item me-3">
-          <a class="nav-link text-uppercase" routerLinkActive="btn active-link" routerLink="/contact">Contact</a>
-        </li>
+
+        @for (link of links; track $index) {
+          <li class="nav-item me-3">
+            <a class="nav-link text-uppercase" routerLinkActive="btn active-link" [routerLink]="link.Lsrc">{{link.lName}}</a>
+          </li>
+        }
+
       </ul>
     </div>
   </div>
